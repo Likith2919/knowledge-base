@@ -1,0 +1,9 @@
+{
+  "label": "Documentation",
+  "position": 2,
+  "className": "documentation",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

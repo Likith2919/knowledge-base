@@ -1,0 +1,9 @@
+{
+  "label": "Troubleshooting",
+  "position": 3,
+  "className": "troubleshooting",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

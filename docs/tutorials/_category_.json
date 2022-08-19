@@ -1,0 +1,9 @@
+{
+  "label": "Tutorials",
+  "position": 9,
+  "className": "tutorials",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "ELK",
+  "className": "do-team",
+  "link": {
+      "type": "generated-index",
+      "title": "What's inside?"
+  }
+}

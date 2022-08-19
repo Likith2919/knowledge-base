@@ -1,0 +1,9 @@
+{
+  "label": "Integrations",
+  "position": 5,
+  "className": "integrations",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

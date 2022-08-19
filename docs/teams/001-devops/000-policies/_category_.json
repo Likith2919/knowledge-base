@@ -1,0 +1,9 @@
+{
+  "label": "Policies",
+  "position": 1,
+  "className": "do-team",
+  "link": {
+      "type": "generated-index",
+      "title": "What's inside?"
+  }
+}

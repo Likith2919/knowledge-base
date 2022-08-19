@@ -1,0 +1,9 @@
+{
+    "label": "Bot Building",
+    "position": 5,
+    "className": "be-team",
+    "link": {
+        "type": "generated-index",
+        "title": "What's inside?"
+    }
+}

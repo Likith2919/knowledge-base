@@ -1,0 +1,9 @@
+{
+  "label": "WABA",
+  "position": 10,
+  "className": "do-team",
+  "link": {
+      "type": "generated-index",
+      "title": "What's inside?"
+  }
+}

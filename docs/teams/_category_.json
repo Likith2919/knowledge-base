@@ -1,0 +1,9 @@
+{
+  "label": "Teams",
+  "position": 2,
+  "className": "teams",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "DevOps",
+  "position": 2,
+  "className": "team",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Prometheus & Grafana",
+  "position": 5,
+  "className": "do-team",
+  "link": {
+      "type": "generated-index",
+      "title": "What's inside?"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Onboarding",
+  "position": 2,
+  "className": "onboarding",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

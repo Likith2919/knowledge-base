@@ -1,0 +1,75 @@
+---
+title: sshuttle
+# sidebar_position: 1
+slug: VPN
+author: Likith Venkat
+author_title: Jr.DevopsEngineer@ Ori
+
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+The docs cover the Intro to SShuttle and SShuttle Client installation
+
+## What is sshuttle
+
+- sshuttle allows you to create a VPN connection from your machine to any remote server that you can connect to via ssh, as long as that server has a sufficiently new Python installation. ... If run on a router, sshuttle can forward traffic for your entire subnet to the VPN.
+
+## For Developers
+
+- sshuttle Installation steps
+
+<Tabs groupId="operating-systems"
+  defaultValue="macOS"
+  values={[
+    {label:"MacOS", value: "macOS"},
+    {label:"Linux", value:"Linux"}
+  ]}
+>
+<TabItem
+  value="macOS"
+>
+ Run these commands in terminal
+
+- `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)`
+
+- `brew install shuttle`
+
+</TabItem>
+<TabItem
+  value="Linux"
+>
+ Run these commands in terminal
+
+- For Ubuntu
+  `sudo apt install sshuttle -y`
+
+- For Centos/RHEL
+  `sudo yum -y install sshuttle`
+
+</TabItem>
+
+</Tabs>
+
+## Connection through sshuttle
+
+- After installing the sshuttle, To run the sshuttle use below command:
+  
+  - Command:     `sshuttle -r ori-dev@shuttleIP 0/0 -x shuttleIP --no-latency-control`
+     
+     - If you don’t have the sshuttleIP and access, request the same from DevOps Team.
+
+
+`Note:If you face any issues with the client installation,please contact the DevOps Team`
+
+## For DevOps
+
+Steps to be followed by the DevOps team
+
+- Go to the accessmanagement repo.
+- First verify whether user key is present in `all_keys`.  If it is not, ask with the person and get the .pub key add it in `all_keys` as `FirstName.SecondName.key`
+- Add the `name.key` in the users file inside the project shuttle.
+- For e.g: If someone requests the access for dev shuttle then, you will have to add the key in below file.
+  - File path: `projects/shuttle-dev/userKeys/users` 
+- Push the code in your branch and raise PR (Pull request) to the main branch (v2).
+-  After merged the request, Run this job [Link](https://jenkins.oriserve.com/view/accessManagement/job/test-accessmanagement/)

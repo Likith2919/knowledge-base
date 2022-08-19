@@ -1,0 +1,9 @@
+{
+  "label": "Knowledge Base",
+  "position": 1,
+  "className": "knowledge-base",
+  "link": {
+    "type": "generated-index",
+    "title": "What's inside?"
+  }
+}

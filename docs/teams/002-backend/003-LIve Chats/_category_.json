@@ -1,0 +1,9 @@
+{
+    "label": "Live Chats",
+    "position": 3,
+    "className": "be-team",
+    "link": {
+        "type": "generated-index",
+        "title": "What's inside?"
+    }
+}

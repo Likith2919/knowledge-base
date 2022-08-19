@@ -1,0 +1,107 @@
+---
+title: OpenVPN
+# sidebar_position: 1
+slug: OpenVPN
+author: Likith Venkat
+author_title: Jr.DevopsEngineer@ Ori
+
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+The docs cover the OpenVPN Clients installation.
+
+## Introduction
+
+- We are using various VPNs to connect to the private remote network and avoid using the public network.
+
+- VPNs that we use here :
+  - OpenVPN (supported by Windows, Mac, Linux)
+  - sshuttle (supported by Mac, Linux)
+  
+## What is OpenVPN
+
+- OpenVPN is an open source connection protocol used to facilitate a secure tunnel between two points in a network.
+- When you connect to the internet, particularly on a public network, there is a risk involved in transmitting sensitive data across the network. This is why it’s considered a best practice to never log into your bank while on public WiFi.
+
+- when you connect to a Virtual Private Network, or “VPN”, using the OpenVPN protocol, your data is secured behind a strong encryption.
+  
+## For Developers
+
+Steps to be followed by the Developers.
+  
+  - OpenVPN installation steps
+  
+<Tabs groupId="operating-systems"
+  defaultValue="macOS"
+  values={[
+    {label:"MacOS", value: "macOS"},
+    {label:"Linux", value:"Linux"},
+    {label:"Windows", value:"Windows"}
+  ]}
+>
+<TabItem
+  value="Linux"
+>
+Run the following set of commands.
+
+- wget [Link](https://s3.ap-south-1.amazonaws.com/oriserve.com/VPNScript/setupVPNclient.sh)
+- sudo sh setupVPNclient.sh user.ovpn.
+- Replace user.ovpn file with your own .ovpn file.
+- If you don’t have the .ovpn file, request the same from DevOps Team.
+- Verify by running the following command
+  - curl ipInfo.io
+  - IP should be 3.108.18.0, If not then contact DevOps Team.
+  
+  - Press ctrl + c on the terminal to exit the prompt.
+  
+  - Now, To start/stop the client
+    - sudo systemctl start openvpn client.service
+    - sudo systemctl stop openvpn client.service
+
+</TabItem>
+<TabItem
+  value="macOS"
+>
+Run the following commands
+
+- Download the client from this [link](https://tunnelblick.net/release/Latest_Tunnelblick_Stable.dmg)
+
+- Install
+  - Open App
+  - Drag and drop your .ovpn file to the application icon in the menu bar.
+  - If you don’t have the .ovpn file, request the same from DevOps Team.
+
+</TabItem>
+<TabItem
+  value="Windows"
+>
+Run the below commands
+
+- Download and Install the client from this [Link](https://swupdate.openvpn.org/community/releases/OpenVPN-2.5.2-I601-amd64.msi)
+
+- Copy your .ovpn file to the following location:
+
+- C:\Program Files\OpenVPN\config\
+
+- If you don’t have the .ovpn file, request the same from DevOps Team.
+
+- Launch the OpenVPN client, it should get connected.
+
+</TabItem>
+</Tabs>
+  
+  `Note: If you face any issues with the client installation, please contact the DevOps Team.`
+
+
+## For DevOps
+
+Steps to be followed by the DevOps team.
+
+- Log in to the OpenVPN server
+- Go to the path `/root/openVpn`. you will find the scripts required to provision the access.
+- Use this command to generate the .ovpn file of the user `./openvpn-install_auto.sh ori-username`.
+- `For example : ./openvpn-install_auto.sh ori-likith-venkat`
+- The .ovpn file will be generated at the location `/root/openVpn/openVpnClients`.
+- Copy this File into the location by using the command `cp user.ovpn /home/ubuntu/clients/`.
+- Share this `.ovpn` file to the user as per convenient.

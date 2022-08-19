@@ -1,0 +1,9 @@
+{
+    "label": "Reporting",
+    "position": 1,
+    "className": "be-team",
+    "link": {
+        "type": "generated-index",
+        "title": "What's inside?"
+    }
+}
